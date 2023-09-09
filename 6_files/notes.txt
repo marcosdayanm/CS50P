@@ -1,0 +1,23 @@
+Input and Output in Files
+
+With files you can storage information for long-term, not only on the RAM while running the code
+
+with open('archivo.txt','mode') as file:  (luego usar bloque de identación)
+El síntax para abrir archivos y que se cierren automáticamente
+sirve para abrir archivos, en archivo.txt, se pone cualquier archivo o nombre, y en el mode, se pone ya sea r, w o a
+el estándar que se usa para escribir es "a" porque appendea, "w" sobreescribe
+se puede no escribir "r", ya que es el estándar si no se escribe nada
+
+Hay que añadir un \n para que salte de línea porqwue sino va a escribir todo en la misma línea
+
+un archivo.csv es n formato con valores separados por una coma, (csv significa comma separated values)
+En el código students.py, hay un buen proceso y explicación de como leer csv con diccionarios
+
+Si un elemento de un archivo csv tiene una coma, se le ponen unas comillas y con el módulo csv, al usar la función rfeader, autompaticamente detecta que la coma es parte del texto y la guarda en la lista como parte de elemento del csv
+
+En el código de addtud.py, hay explicaciones de cómo aladir elementos a un csv con el formato de un diccionario
+
+
+Binary file: Archivos de solo 0 y 1 para guardar todo tipo de archivos, videos, imagenes, sonido, etc
+Librería PIL sirve para hacer cosas con archivos de imágenes
+Su documentación es pillow.readthedocs.io

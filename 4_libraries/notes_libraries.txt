@@ -1,0 +1,50 @@
+Libraries: Code that you, or someone wrote, that you can implement on your own code
+Modules: Encourage reusability of code. This is how Python struggled to make libraries
+
+It is important to read the documentation of the library you will use, to know about all the features of it
+
+Default Libraries on Python that you can import:
+- Random
+
+To import a library write: import libraryname
+To use a function of it: libraryname.function()
+
+To use a specific function, you can write: from libraryname import function
+To use it: function()
+
+To import a library with a nickname write: import libraryname as lb
+Call a function: lb.function()
+
+
+
+Command-line arguments:
+Allows you to give an addicional input to the program when you are running it, and it will pass as input to the user
+file comm_line_args.py
+
+If you write a command-line argument on "", Python will treat it as one element
+sys.exit() will exit the program, it allows to enter an output to the user in between the parenthesis of the function
+
+
+
+
+Packages:
+Is 3rd party library that can be installed on the computer
+Package manager (pip3) package manager that allows to install packages on your own computer by the terminal
+Command: pip3 install modulename
+
+
+APIs:
+An API is an Application Programming Interface
+It can refer to Python Files and Function, or 3rd party services that we can write code to talk to
+We can write code that connects to an API on the Internet and for example, download data
+
+Package of API on Python: requests
+
+JSON files: JavaScript Object Notation, this is known as a language agnostic format for  exchanging data between computers
+You don't have to use JS, you can use Python or any other language
+
+json library: A library that allows to manipulate JSON files and understand them better
+
+Checar file apis.py
+
+

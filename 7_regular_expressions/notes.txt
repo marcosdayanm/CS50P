@@ -1,0 +1,54 @@
+Regular Expressions (regex): It's a pattern identified that can be used to validate something
+Es muy ineficiente comprobar cosas solo con if statements para comporbar si el tipo de dato cumple con el formato, y se puede brincar fácilmente, por ejemplo en una dirección de mail se puede poner algo que cumpla con los re3querimentos del if statement y ya pasaría
+Las regular expressions son literal patterns, no son specific values
+
+Función endswith() comprueba si un string acaba con esa sentencia
+
+En Python está la librería re para checar regular expressions, que permite checar patrones como emails, o diferentes tipos de input y datos
+formato de la función "search": re.search(pattern, string, flags=0)
+
+Símbolos que pueden ser usados en la casilla de "pattern" (cada simbolo se pone siguiente a la letra que pongamos y así, como para dar formato):
+    - . any character except a new line
+    - * 0 or more repetitions (repetitions se refiere a caracteres a su izquierda)
+    - + 1 or more repetitions (that means 1 or more of the thing to the left)
+    - ? 0 or 1 repetition
+    - {m} m repetitions
+    - {m,n} m-n repetitions (ranging your repetitions)
+    - ^ matches the start of the string
+    - $ matches the end of the string or just before the newline at the end of the string
+    - [] set of characters that has to have
+    - [^] complementing the set, el complemento, osa todo menos eso (poner letras al lado del ^)
+    - se puede usar "-" para poner de un elemento al otro en unos corchetes, por ejemplo: a-z
+    - | se usa para poner dentro de () muchas opciones de lo que puede haber dentro de ellos, ex: (edu|com|org|net|mx), se puede haver eso mismo para por ejemplo usar el patron predefinido de word character, y añadirle el espacio, por ejemplo (\w|\s)
+    - (...) un grupo al asignar la función search a una variable
+    - (?:...) non-capturing version, hacer que el grupo no se capture por la variable a la que le guardemos la search function
+
+Patrones prefefinidos de una regular expression:
+    - \d decimal digit
+    - \D not a decimal digit
+    - \s whitespace character
+    - \S not a whitespace character
+    - \w word character, numbers and underscore
+    - \W not a word character
+
+
+si no se logra completar el ciclo de los patterns que insertamos, la función regresará False como valor
+
+para poner un punto como formato sin que la función interprete que nos referimos al Símbolo, usamos el caracter de escape, backslash "\", pero tenemos que porner al principio del string una r, como si fuera un fsting, ahor aes un rawstring
+las flags son como parámetros que le podemos pasar a nuestra función para que haga, por ejemplo si le pasamos re.IGNORECASE, lo que va a hacer es transformar las uppercase a lowercase e ignorarlas
+
+
+tambipen existen las funciones re.match() y re.fullmatch(), pero falta investigarlas bien
+
+
+Función re.sub(pattern, repl, string, count=0, flags=0)
+Ésta sirve para insertyar un patrón en pattern, en replacement poner por qué quieres reemplazar, luego pasar el string al que le quieres hacer eso, count para saber cuántas veces hacerlo, por si se podría hacer 2 veces, y flags como para funciones preescritas en la función
+Aunque la función puede ser útil, siento que es más útil directo usar la función search porque tiene más funcionalidades, además podemos usar el return de la función para guardar grupos, y además para analizar el return con booleanos
+
+También está la función re.split(pattern, string, maxsplit=0, flags=0)
+Lo que hace es splitear un string usando un patrón
+
+Y re.findall(pattern, string, flags=0)
+Para encontrar copias múltiples de un patrón en un string para que por ejemplo podamos manipularlas todas a la vez, o lo que queramos hacer
+
+

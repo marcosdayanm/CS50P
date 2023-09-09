@@ -1,0 +1,11 @@
+Exceptions refer to problems in our code
+
+Tipos de errores:
+SyntaxError --> errores de sintax que se detectan fácil y se pueden corregir fácil
+ValueError --> error en donde se mete un data type en un lugar que no puede ser procesado, por ejemplo si se hace algo así: int('cat')
+NameError --> error que habla de variables no definidas y todo tipo de cosas relacionadas con variables
+
+
+Usar While Loops en las estructuras 'try' para que no se pueda avanzar hasta que se de el input correcto
+
+

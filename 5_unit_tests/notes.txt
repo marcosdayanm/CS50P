@@ -1,0 +1,26 @@
+Unit tests: Testing your own code, using your code on your own
+To verify if the code is implemented correctly
+In reality, unit tests means implementing tests to units of your code, generally speaking of the functions you worte inside your code
+
+assert: keyword en Python que checa si algo es verdad. Si assertas algo en Python que no es verdad, vas a ver un error en la pantalla
+
+usando pytest para correr el archivo de python, se puede correr automáticamente un unit test, con las funciones assert el programa va a detectar si corrió de manera exitosa o no, y va a decir dónde está el error
+el problema de pytest, es que cuando encuentra el primer error en assert en una misma función, para, sin mostrar las demás líneas
+
+Para resolver ésto, se tiene que separar en diferentes funciones, ya que el framework pytest va a correr todas las funciones
+
+pytest va a correr solito las funciones, solo hay que definirlas y va a ejecutar todas las funciones del archivo de testeo
+pytest es un framework pero a la vez tiene su módulo en python para que podamos usar algunas funciones que tiene
+
+si declaro una función de esta manerra por ejemplo:
+def function(arg='Hola'):
+no necesariamente tiene que recibir un input, si lo recibe lo va a usar, pero sino, va a usar 'Hola' como input, string que fie declarado en el paréntesis de la función
+
+A package, is a group of Python modules that are organized on a folder
+
+Para correr pytest en un paquete creado por nosotros:
+1. Meter todos los c´+odigos de unit tests en una carpeta
+2. Crear un archivo .py que se llama --init--.py
+3. Correr pytest foldername
+
+De ésta manera, se correrán todos los archivos dentro del folder con pytest

@@ -1,0 +1,94 @@
+Etc, in Python you can do a lot of things with a lot libraries.
+Go to docs.python.org/3/howto to see tutorials about how to do things
+
+How can we teach ourselves to learn by ourselves? That is the most important skill in programming
+
+
+set: A collection of values which don't have duplicates
+    En Python, para appendear a un set, se usa la función .add() y adentro de los paréntesis va lo que se va a añadir
+
+
+
+Global Variables:
+    En Python, si declaras variables hasta afuera, éstas serán globales
+    Se puede leer una global desde cualquier función, pero no cambiarla de manera simple, sin hacer nada
+    Para poder editar una variable global en una función, se tiene que poner la keywod global y la variable, como para inicializarla
+    Ésto no se usa en ambientes profesionales
+
+
+Classes y Global Variables:
+    OOP resuelve mucho mejor el problema de las global variables en Python, ya que, todos los atributos pueden ser accesados desde la clase en Python, haciendo que se las limpia la escritura del código
+    Para códigos más grandes, es conveniente usar OOP, organiza mucho mejor las cosas, es más práctivo, facil y profesional
+
+
+Constants:
+    Variables que no permiten ser cambiadas bajo ninguna circunstancia
+    En Python no hay eso pero por convención se usa la variable toda en mayúsculas
+    De nuevo, pesto se logra mejor con OOP ya que se pueden definir variables de la clase, las cuales van a poder accesarse desde todos los objetos con Classname.VAR adentro de la clase, y generalmente éstas son constantes
+
+
+Type Hints:
+    docs.python.org/3/library/typing.html
+    En Python no se tiene que decir qué tipo de variable estás declarando, o pasando a una función se supone que Python lo debe de adivinar.
+    Lo bueno de otros lenguages es que es más fácil detectar errores de data types
+    Programa bueno para checar se llama mypy, se puede instalar con pip
+        mypy.readthedocs.io
+
+
+Docstrings:
+    Is a standardized notation that specifies how to document functions
+    If you want to write the fonctionality of a function you should write comments like this: """This is a documented function""" because this is the convention and then you can use software to extract the comments and generata a PDF automatically
+
+
+Argparse:
+    Es una librería que nos ayuda a trabajar con command line arguments
+
+
+Unpacking:
+    Quiere decir, pasar los elementos individuales de una lista
+    Para hacerlo de la manera resumida, se usa este syntax: *listname, con el asterisco, decimos que en realidad estamos pasando los elemntos individuales de la lista
+    No funciona con sets
+    Puede funcionar con diccionarios, pero si lo queremos pasar a una función, las keys se deben de llamar exactamente igual a los argumentos de la función
+    Para hacerlo con un diccionario el syntax es: **dictname
+    Podemos tener muchos errores con este método, así que hay que checar bien lo que hacemos
+
+
+Asteriscos (Relacionado con Unpacking):
+    No solo se usan en el entorno de unpacking, sino también se pueden usar para hacer que una función reciba un número variable de argumentos
+    Podemos ver un ejemplo de ésto con la función print() en la documentación de Python, en donde la misma función por convención toma un número variable de argumentos
+    Ésta es la sintaxis para recibir un número variable de argumentos
+        *args se refiere a los argumentos pasados como unna lista, y **kwargs se refiere a los argumentos pasados como un diccionario
+        No se tienen que llamar de ésta manera, solo ésta es la convención para referirse a ésto
+
+
+Map:
+    Nos permite aplicarle una función en específico a cada elemento de una secuencia
+    el sintax es: var = map(function, elem1, elem2, ...) los elementos pueden a su vez ser listas
+    Map ejecutará la función para cada elemento y regresa un valor por cada elemento
+
+
+List Comprehensions:
+    Nos permiten construir una lista en el camino de una forma sencilla sin tener que estar usando un loop y la función append
+    upercased = [w.upper() for w in words] ésta sería la syntax para aplicar la función a cada elemento de la lista words, y appendearla a la lista uppercased
+    la syntax quiere decir, haz esto, para tal elemento en tal data type
+
+
+Filter:
+    Espera que su primera función sea una booleana, se la aplica a cada elemento de una lista, para saber si incluirla o no en su return value.
+
+
+Dictionary Comprehensions:
+    Hacer lo mismo que con las listas pero con los diccionarios
+
+
+Enumerate:
+    Una función para enumerar las iteraciones en una lista
+    Ésto sirve para iterar sobre una lista a la vez de que tenemos un iterador que podemos usar para lo que queramos.
+    Ejemplo de syntaxis: for i, student in enumerate(students):
+                            print(i+1, students)
+
+
+Generators:
+    Son funciones diseñadas para trabajar y generar grandes cantidades de datos, pero que cada momento vayan regresando pequeñas cantidades de ellis, para que no se sature la memoria y pueda funcionar la función
+    Con la keyword "yield", literal adentro de un loop, en vez de poner "return", poner "yield", entonces regresará el valor y luego reanudará el loop
+    

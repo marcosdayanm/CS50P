@@ -1,0 +1,83 @@
+Functional Programming: PAssing functions around, not a procedural program structure
+OOP is a great solution as the programs get larget and more complex
+
+tuple:
+    type of data that is a collection of values, it is inmutable, that means the values cannot be changed.
+    When youy return two values on Python, actually you are returning a tuple
+    You can still return a list from. afunction, just adding the square brackets on the return valiues
+    Se puede acceder a los índices de una tupla de la misma manera que con una lista, por ejemplo, tuple[0]
+
+An object on a class, allow us to invent our own data types! also giving them personalized names
+A class is like a template, like a mold
+
+Classes have attributes, that are like the parts and characteristics of our own data type, to access them we use the dot "." between the name of the class and the name of the attribute
+Any time you use a class, you are creating objects, and you can create the attributes refering to them as if they already existed
+The attributes are mutable, but you can do them inmutable
+The attributes inside an object, are also called instance variables
+Las clases tambipen tienen sus funciones, o mejor llamados sus métodos
+
+You can pass values ot the class in a lot of ways, you can do it assigning the attributes with the dot format, and also passing variables using the constructor, I mean the name of the class and parenthesis, and inside of it, the attributes
+Classes come with predefined methods, special methods
+    An example of it is the init function, def __init__(self):, that allow us to initialize the content of an object to a class
+
+Todo ésto se comporta de una manera parecida que con los diccionarios. En los diccionarios, añadimos keys a ellos, con los objetos, estamos añadiendo instance variables a los objetos
+
+def __init__(self) method:
+    this is the function called when we perform the inicialization of the attributes of a class, with the constructor, its name is __init__ because the authors of Python decided that
+    El parámetro "self", que podría tener cualquier otro nombre pero por convención se pone siempre self, tiene que se rel primer argumento del método, y sirve para que podamos tener acceso al objeto que se creó en ese mismo instante, porque sino no podríamos tener acceso a peste, es algo por convención en Python que funciona de ésta forma
+    (Notas en oop1.py)
+
+    Ésta función está premiamente definida en el lenguage, pero debemos de manipularla para asignar los valores que pasemos en las variables, a atributos en objetos
+
+
+Keyword raise:
+    Esta keyword sirve para crear nuestras propias expeciones, para alertar al programador o usuario que hay un error
+    Lieral ponemos por ejemplo: raise ValueError, así vamos a nosotros generar el error.
+
+    Anteriormenta ya habíamos generado accidentalmente errores, tambipen se pueden generar a propósito
+    Ésto es muy útil porque lo podemos encadenar con tries y excepts para ir checando si lo que mete es usuario es correcto o nel
+
+
+Special Methods in Python:
+    __str__: Python will automatically call this function when you try to print the object as a string
+
+Properties:
+    Un atributo del que tenemos más control, para poder protegernos de mejor manera
+    Se usa con la keyword @property, en realidad property es una fjunción de python
+
+Decorators:
+    Functions that modify the behavior of other functions
+
+Properties:
+    En Python, se puede establecer un getter o setter, una especie de polimorfismo como si fuera en C++, para que se llame la función getter o setter, y podemos armar todas las medidas de seguridad en el solo setter
+    El setter terndrá 2 argumentos, self y la variable a la que se asignará al atributo
+    El getter solo tendrá el argumento self, porque solo lo que hará es regresar el valor del atributo
+
+
+Encapsulamiento:
+    En Python, desgraciadamente no existe un encapsulamiento perce, la convención para variables que no deben de ser tocadas, variables que son usadas paea que el programa opere, es poner un "_", o hasta a veces dos, al principio de la variable, para uqe nadie la vaya a usar
+
+
+
+Class methods:
+    Hay veces que queremos usar funciones de una clase sin un objeto, o que no haya ubjetos en una clase porque no necesitamos varios "moldes", pase lo que pase. Para esto lo podemos hacer con la keyword "@classmethod"
+    Ésta otra función es aquella que no va a tener acceso a el método __init__, pero si a la clase como tal. No se necesita un __init__ ya que solo se inicializará un objetos con unos datos concretos
+    Ésta función se debe de poner arriba de todos los métodos que queramos que sean propios de la clase, mientras que los instance methods ya cienen explícitos y no necesitamos declararlos con ninguna keyword
+
+    Un ejemplo de un buen uso que le podemos dar a ésta función, es hacer una función adentro de la clase para inicializar objetos, la cual trabaje solo con la clase, haga return del objeto, y ya lo podemos usar.
+    Con ésto ya no estamos usando al constructor, o a __init__ para inicializar a un objeto
+
+    Los instance methods solo operan en objetos, los classmethods en toda la clase
+
+
+Static Methods:
+    Otros tipos de métodos que no vamos a explorar, perot ambién existen
+
+
+Inheritance:
+    Prestar métodos y atributos de una clase a otra
+
+
+Operator Overloading:
+    Taking common operators to do more functions than its main.
+    We have donde that for example with the "+" sign, we use it also por concatenating strings
